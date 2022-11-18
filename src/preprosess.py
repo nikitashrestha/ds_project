@@ -11,7 +11,16 @@ load_dotenv()
 
 hdfs_file_path = os.environ['HDFS_FILE_PATH']
 
+"""
+A function to pre-process data.
 
+Args:
+bucket_name str Name of S3 bucket
+object_key str Name of object file
+
+Returns:
+spark_df A pre-processed spark dataframe
+"""
 def preprocess(bucket_name, object_key):
     logging.info("Started running pipeline for data pre-processing.")
 
@@ -41,7 +50,6 @@ def preprocess(bucket_name, object_key):
     # Normalize each feature to have unit standard deviation.
     spark_df = scalerModel.transform(spark_df)
 
-    print(spark_df.show())
     # Write pre-processed data to hdfs
     spark_df.write.parquet(os.path.join(hdfs_file_path, object_key.replace(".csv", "1.parquet")))
 

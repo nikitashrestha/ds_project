@@ -1,5 +1,7 @@
 __pycache__
-data/creditcard.csv
+data
 venv
 src/.ipynb_checkpoints
+.env
+model
 .env
