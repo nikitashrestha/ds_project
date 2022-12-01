@@ -17,6 +17,8 @@ The data and the model obtained after training is stored in AWS S3.
 1. HADOOP
 2. Apache Spark
 3. AWS CLI
+4. Python
+5. Java
 
 # Steps to setup the project
 1. Clone project in your local using:
