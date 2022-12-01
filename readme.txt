@@ -25,3 +25,8 @@ stop-yarn.sh
 https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/SingleCluster.html
 
 https://hadoop.apache.org/docs/stable/hadoop-project-dist/hadoop-common/ClusterSetup.html
+
+"AccessKeyId": "ASIA2I2VR7W6WVQGTXWI",
+        "SecretAccessKey": "ZiYjLPYS+clf/B88Tdc77n70+IBh2wB/POgEe7M+",
+        "SessionToken": "FwoGZXIvYXdzEP7//////////wEaDGxzVbZVzEAu/s9fuSJqEix1PfUz4LZV9dFNW1jMDDKBzY6HhNKar8O2yN3NSvb54m/CDCDHevZbLKsYThXinNXsgfcrvm2nIB41hucuHlvP3VYaLgyU5gw2+WhPTRgvqy8sVUKgjhvWKImeJuwL7b54Mxz/VfhUMCib1oScBjIoKa3dYZ9skcOPQzH9jq3HqHJbplMcMXCCKW6E5BCgoac6PhjwnKlfnQ==",
+        "Expiration": "2022-11-25T21:52:43Z

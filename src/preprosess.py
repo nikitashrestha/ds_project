@@ -22,7 +22,7 @@ Returns:
 spark_df A pre-processed spark dataframe
 """
 def preprocess(bucket_name, object_key):
-    logging.info("Started running pipeline for data pre-processing.")
+    print("Preprocessing Pipeline: Started running pipeline for data pre-processing.")
 
     df = get_file_from_S3(bucket_name, object_key)
     
@@ -51,9 +51,9 @@ def preprocess(bucket_name, object_key):
     spark_df = scalerModel.transform(spark_df)
 
     # Write pre-processed data to hdfs
-    spark_df.write.parquet(os.path.join(hdfs_file_path, object_key.replace(".csv", "1.parquet")))
+    spark_df.write.parquet(os.path.join(hdfs_file_path, object_key.replace(".csv", "2.parquet")))
 
-    logging.info("Completed running pipeline for data pre-processing.")
+    print("Preprocessing Pipeline: Completed running pipeline for data pre-processing.")
 
     return spark_df
 

@@ -24,7 +24,7 @@ def train_model(df):
 
     accuracy = evaluator.evaluate(predictions)
 
-    logging.info("Training of Model completed. Overal accuracy is {0}".format(accuracy))
+    print("Training Piepline: Training of Model completed. Overal accuracy is {0}".format(accuracy))
 
     rfModel.write().overwrite().save(TEMP_MODEL_PATH)
     
@@ -34,7 +34,7 @@ def train_model(df):
 
 def main():
     spark = get_spark()
-
+    # print(os.path.join(os.environ["HDFS_FILE_PATH"],sys.argv[1]))
     preprocessed_df = spark.read.parquet(os.path.join(os.environ["HDFS_FILE_PATH"],sys.argv[1]))
     train_model(preprocessed_df)
 
